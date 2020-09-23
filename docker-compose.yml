@@ -1,0 +1,11 @@
+
+  version: '3.4'
+
+networks:
+  reaction:
+    external:
+      name: reaction.localhost
+
+services:
+  web:
+  

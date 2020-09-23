@@ -1,11 +1,17 @@
-FROM node:alpine
+FROM node:10
 
-WORKDIR /app
+# Setting working directory. All the path will be relative to WORKDIR
+WORKDIR /usr/src/app
 
-COPY package.json /app
-
+# Installing dependencies
+COPY package*.json ./
 RUN npm install
 
-COPY . /app
+# Copying source files
+COPY . .
 
-CMD ["npm", "run", "start"]
+# Building app
+RUN npm run build
+
+# Running the app
+CMD [ "npm", "start" ]
