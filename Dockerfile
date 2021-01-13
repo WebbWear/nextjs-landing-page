@@ -15,3 +15,6 @@ RUN npm run build
 
 # Running the app
 CMD [ "npm", "start" ]
+
+
+# docker run -d -p 3333:3000 jwebb101/landing-page-nextjs:latest
